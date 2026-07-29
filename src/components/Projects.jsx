@@ -13,7 +13,12 @@ const ProjectCard = ({ project, index }) => (
   >
     {project.tag && (
       <div style={{ marginBottom: '1rem' }}>
-        <span className="badge" style={{ backgroundColor: '#fef3c7', color: '#d97706' }}>
+        <span className="badge" style={{ backgroundColor: '#fef3c7', color: '#d97706', display: 'inline-flex', alignItems: 'center', gap: '6px', padding: '0.25rem 0.75rem', borderRadius: '12px', fontSize: '0.75rem', fontWeight: 600 }}>
+          <motion.span
+            animate={{ opacity: [1, 0.4, 1] }}
+            transition={{ repeat: Infinity, duration: 1.5 }}
+            style={{ width: '6px', height: '6px', backgroundColor: '#d97706', borderRadius: '50%' }}
+          ></motion.span>
           {project.tag}
         </span>
       </div>
@@ -26,10 +31,11 @@ const ProjectCard = ({ project, index }) => (
           href={project.githubUrl}
           target="_blank"
           rel="noopener noreferrer"
-          style={{ color: 'var(--text-color)', padding: '0.25rem', display: 'flex', alignItems: 'center' }}
-          title="View on GitHub"
+          className="btn btn-outline"
+          style={{ padding: '0.4rem 0.8rem', fontSize: '0.85rem' }}
+          title="View Source Code"
         >
-          <FiGithub size={20} />
+          <FiGithub size={16} /> GitHub
         </a>
       )}
     </div>
@@ -51,9 +57,17 @@ const ProjectCard = ({ project, index }) => (
 
     {project.stack && project.stack.length > 0 && (
       <div style={{ marginTop: 'auto', paddingTop: '1.5rem', borderTop: '1px solid var(--border-color)' }}>
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem' }}>
           {project.stack.map((tech, idx) => (
-            <span key={idx} style={{ fontSize: '0.8rem', padding: '0.2rem 0.6rem', backgroundColor: 'var(--bg-color)', borderRadius: '4px', color: 'var(--secondary-text)', fontWeight: 500 }}>
+            <span key={idx} style={{
+              fontSize: '0.75rem',
+              padding: '0.3rem 0.8rem',
+              backgroundColor: 'rgba(79, 70, 229, 0.08)',
+              border: '1px solid rgba(79, 70, 229, 0.2)',
+              borderRadius: '20px',
+              color: 'var(--primary-color)',
+              fontWeight: 600
+            }}>
               {tech}
             </span>
           ))}
@@ -72,18 +86,18 @@ const Projects = () => {
       features: ['Centralized medical records', 'Role-based access', 'AI-powered analytics', 'Blockchain data integrity']
     },
     {
-      title: 'TaskPulse',
-      subtitle: 'Real-Time Task Management Platform',
-      features: ['Task Assignment', 'Employee Monitoring', 'Dashboard', 'Dynamic Status Tracking'],
-      stack: ['React', 'Node', 'Express', 'MySQL'],
-      githubUrl: 'https://github.com/Suhassagar/TaskPlus'
-    },
-    {
       title: 'MIT EduPulse',
       subtitle: 'College Feedback Management System',
       features: ['Student feedback', 'Admin dashboard', 'REST API', 'Database Integration'],
       stack: ['React', 'Node', 'Express', 'MySQL', 'JavaScript'],
       githubUrl: 'https://github.com/Suhassagar/college_feedback_system'
+    },
+    {
+      title: 'TaskPulse',
+      subtitle: 'Real-Time Task Management Platform',
+      features: ['Task Assignment', 'Employee Monitoring', 'Dashboard', 'Dynamic Status Tracking'],
+      stack: ['React', 'Node', 'Express', 'MySQL'],
+      githubUrl: 'https://github.com/Suhassagar/TaskPlus'
     },
     {
       title: 'Ecommerce',

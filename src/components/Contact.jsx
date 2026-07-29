@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FiMail, FiPhone, FiGithub, FiLinkedin, FiMapPin } from 'react-icons/fi';
+import { FiMail, FiPhone, FiGithub, FiLinkedin, FiMapPin, FiInstagram } from 'react-icons/fi';
 
 const Contact = () => {
   const [result, setResult] = useState("");
@@ -10,8 +10,8 @@ const Contact = () => {
     setResult("Sending....");
     const formData = new FormData(event.target);
 
-    // Replace with your actual Web3Forms access key
-    formData.append("access_key", "43cafb57-7bfc-4fb2-a782-32874414dd31");
+    // Use the Web3Forms access key securely from the .env file
+    formData.append("access_key", import.meta.env.VITE_WEB3FORMS_KEY);
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
@@ -53,17 +53,17 @@ const Contact = () => {
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                <div style={{ width: '48px', height: '48px', borderRadius: '12px', backgroundColor: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: 'var(--shadow-sm)', color: 'var(--primary-color)', fontSize: '1.25rem' }}>
+                <div style={{ width: '48px', height: '48px', borderRadius: '12px', backgroundColor: 'rgba(79, 70, 229, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--primary-color)', fontSize: '1.25rem' }}>
                   <FiMail />
                 </div>
                 <div>
                   <p style={{ fontSize: '0.875rem', color: 'var(--secondary-text)', fontWeight: 500 }}>Email</p>
-                  <a href="mailto:suhassagar44@gmail.com" style={{ fontWeight: 500 }}>suhassagar44@gmail.com</a>
+                  <a href="mailto:suhassagar06@gmail.com" style={{ fontWeight: 500 }}>suhassagar06@gmail.com</a>
                 </div>
               </div>
 
               <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                <div style={{ width: '48px', height: '48px', borderRadius: '12px', backgroundColor: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: 'var(--shadow-sm)', color: 'var(--primary-color)', fontSize: '1.25rem' }}>
+                <div style={{ width: '48px', height: '48px', borderRadius: '12px', backgroundColor: 'rgba(79, 70, 229, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--primary-color)', fontSize: '1.25rem' }}>
                   <FiMapPin />
                 </div>
                 <div>
@@ -74,8 +74,9 @@ const Contact = () => {
             </div>
 
             <div style={{ display: 'flex', gap: '1rem', marginTop: '2.5rem' }}>
-              <a href="https://github.com/Suhassagar" className="btn btn-outline" style={{ padding: '0.5rem', borderRadius: '12px' }}><FiGithub size={20} /></a>
-              <a href="https://www.linkedin.com/in/suhassagar6" className="btn btn-outline" style={{ padding: '0.5rem', borderRadius: '12px' }}><FiLinkedin size={20} /></a>
+              <a href="https://github.com/Suhassagar" target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{ padding: '0.5rem', borderRadius: '12px' }}><FiGithub size={20} /></a>
+              <a href="https://www.linkedin.com/in/suhassagar6" target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{ padding: '0.5rem', borderRadius: '12px' }}><FiLinkedin size={20} /></a>
+              <a href="https://www.instagram.com/suhassagar6/" target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{ padding: '0.5rem', borderRadius: '12px' }}><FiInstagram size={20} /></a>
             </div>
           </motion.div>
 
@@ -85,18 +86,18 @@ const Contact = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <form className="card" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', padding: '2.5rem' }} onSubmit={onSubmit}>
+            <form className="card" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', padding: '2.5rem', borderTop: '4px solid var(--primary-color)' }} onSubmit={onSubmit}>
               <div>
                 <label style={{ display: 'block', fontSize: '0.875rem', fontWeight: 500, color: 'var(--text-color)', marginBottom: '0.5rem' }}>Name</label>
-                <input type="text" name="name" required placeholder="John Doe" style={{ width: '100%', padding: '0.75rem 1rem', borderRadius: '8px', border: '1px solid var(--border-color)', backgroundColor: 'var(--bg-color)', outline: 'none', transition: 'border-color 0.2s', color: 'var(--text-color)' }} />
+                <input type="text" name="name" required placeholder="Your name" className="form-input" />
               </div>
               <div>
                 <label style={{ display: 'block', fontSize: '0.875rem', fontWeight: 500, color: 'var(--text-color)', marginBottom: '0.5rem' }}>Email</label>
-                <input type="email" name="email" required placeholder="john@example.com" style={{ width: '100%', padding: '0.75rem 1rem', borderRadius: '8px', border: '1px solid var(--border-color)', backgroundColor: 'var(--bg-color)', outline: 'none', transition: 'border-color 0.2s', color: 'var(--text-color)' }} />
+                <input type="email" name="email" required placeholder="Your email" className="form-input" />
               </div>
               <div>
                 <label style={{ display: 'block', fontSize: '0.875rem', fontWeight: 500, color: 'var(--text-color)', marginBottom: '0.5rem' }}>Message</label>
-                <textarea name="message" required rows="4" placeholder="How can I help you?" style={{ width: '100%', padding: '0.75rem 1rem', borderRadius: '8px', border: '1px solid var(--border-color)', backgroundColor: 'var(--bg-color)', outline: 'none', transition: 'border-color 0.2s', resize: 'vertical', color: 'var(--text-color)' }}></textarea>
+                <textarea name="message" required rows="4" placeholder="Your message" className="form-input" style={{ resize: 'vertical' }}></textarea>
               </div>
 
               <button type="submit" className="btn btn-primary" style={{ width: '100%', marginTop: '0.5rem' }} disabled={result === "Sending...."}>

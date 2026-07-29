@@ -32,13 +32,21 @@ const Navbar = ({ theme, toggleTheme }) => {
       }}
     >
       <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '80px' }}>
-        <a href="#" style={{ fontSize: '1.5rem', fontWeight: 700, letterSpacing: '-1px' }}>Suhas Sagar</a>
+        <a href="#home" style={{ 
+          fontSize: '1.5rem', 
+          fontWeight: 800, 
+          letterSpacing: '-1px',
+          background: 'linear-gradient(90deg, var(--text-color) 0%, var(--primary-color) 100%)',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          textDecoration: 'none'
+        }}>Suhas Sagar</a>
 
         <nav className="nav-links">
           <a href="#about" style={{ fontSize: '0.9rem', fontWeight: 500, color: 'var(--secondary-text)' }}>About</a>
           <a href="#experience" style={{ fontSize: '0.9rem', fontWeight: 500, color: 'var(--secondary-text)' }}>Experience</a>
-          <a href="#projects" style={{ fontSize: '0.9rem', fontWeight: 500, color: 'var(--secondary-text)' }}>Projects</a>
           <a href="#skills" style={{ fontSize: '0.9rem', fontWeight: 500, color: 'var(--secondary-text)' }}>Skills</a>
+          <a href="#projects" style={{ fontSize: '0.9rem', fontWeight: 500, color: 'var(--secondary-text)' }}>Projects</a>
           <a href="#contact" style={{ fontSize: '0.9rem', fontWeight: 500, color: 'var(--secondary-text)' }}>Contact</a>
         </nav>
 
@@ -54,7 +62,7 @@ const Navbar = ({ theme, toggleTheme }) => {
             {theme === 'dark' ? <FiSun size={20} /> : <FiMoon size={20} />}
           </button>
 
-          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-primary desktop-resume" style={{ fontSize: '0.9rem' }}>
+          <a href="https://drive.google.com/file/d/1OUDuqj7V_veH2Y4kFcP_XP_jgOwawtZw/view?usp=sharing" target="_blank" rel="noopener noreferrer" className={`btn ${scrolled ? 'btn-primary' : 'btn-outline'} desktop-resume`} style={{ fontSize: '0.9rem' }}>
             Download Resume
           </a>
 
@@ -89,10 +97,10 @@ const Navbar = ({ theme, toggleTheme }) => {
         >
           <a href="#about" onClick={() => setIsMobileMenuOpen(false)} style={{ fontSize: '1rem', fontWeight: 500, color: 'var(--text-color)' }}>About</a>
           <a href="#experience" onClick={() => setIsMobileMenuOpen(false)} style={{ fontSize: '1rem', fontWeight: 500, color: 'var(--text-color)' }}>Experience</a>
-          <a href="#projects" onClick={() => setIsMobileMenuOpen(false)} style={{ fontSize: '1rem', fontWeight: 500, color: 'var(--text-color)' }}>Projects</a>
           <a href="#skills" onClick={() => setIsMobileMenuOpen(false)} style={{ fontSize: '1rem', fontWeight: 500, color: 'var(--text-color)' }}>Skills</a>
+          <a href="#projects" onClick={() => setIsMobileMenuOpen(false)} style={{ fontSize: '1rem', fontWeight: 500, color: 'var(--text-color)' }}>Projects</a>
           <a href="#contact" onClick={() => setIsMobileMenuOpen(false)} style={{ fontSize: '1rem', fontWeight: 500, color: 'var(--text-color)' }}>Contact</a>
-          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ fontSize: '0.9rem', justifyContent: 'center', marginTop: '1rem' }}>
+          <a href="https://drive.google.com/file/d/1OUDuqj7V_veH2Y4kFcP_XP_jgOwawtZw/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ fontSize: '0.9rem', justifyContent: 'center', marginTop: '1rem' }}>
             Download Resume
           </a>
         </motion.div>

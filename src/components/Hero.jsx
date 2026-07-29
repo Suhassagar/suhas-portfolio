@@ -3,8 +3,13 @@ import { FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
 
 const Hero = () => {
   return (
-    <section id="home" className="section" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', paddingTop: '120px' }}>
-      <div className="container hero-grid">
+    <section id="home" className="section" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', paddingTop: '120px', position: 'relative', overflow: 'hidden' }}>
+      
+      {/* Background Ambient Glows */}
+      <div style={{ position: 'absolute', top: '20%', left: '-5%', width: '400px', height: '400px', background: 'var(--primary-color)', opacity: 0.08, filter: 'blur(100px)', borderRadius: '50%', zIndex: 0 }}></div>
+      <div style={{ position: 'absolute', bottom: '10%', right: '-5%', width: '300px', height: '300px', background: '#38bdf8', opacity: 0.08, filter: 'blur(100px)', borderRadius: '50%', zIndex: 0 }}></div>
+
+      <div className="container hero-grid" style={{ position: 'relative', zIndex: 1 }}>
 
         {/* Left Side */}
         <motion.div
@@ -22,12 +27,10 @@ const Hero = () => {
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent'
           }}>
-            Full Stack Web Developer
+            Full Stack Developer
           </h1>
 
-          <p style={{ fontSize: '1.2rem', color: 'var(--secondary-text)', marginBottom: '1rem', fontWeight: 400 }}>
-            Building responsive, scalable, and modern web applications with React.js, Node.js, Express.js, MySQL, and MongoDB.
-          </p>
+
 
           <p style={{ fontSize: '1rem', color: 'var(--secondary-text)', marginBottom: '2.5rem', lineHeight: 1.8 }}>
             Computer Science Engineering student with internship experience in React and Java development. Passionate about creating clean, scalable software and continuously learning modern technologies.
@@ -35,12 +38,12 @@ const Hero = () => {
 
           <div className="hero-actions" style={{ display: 'flex', gap: '1rem', alignItems: 'center', flexWrap: 'wrap' }}>
             <a href="#projects" className="btn btn-primary">View Projects</a>
-            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-outline">Download Resume</a>
+            <a href="https://drive.google.com/file/d/1OUDuqj7V_veH2Y4kFcP_XP_jgOwawtZw/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="btn btn-outline">Download Resume</a>
 
             <div style={{ display: 'flex', gap: '1rem', marginLeft: '1rem' }}>
-              <a href="https://github.com/Suhassagar" style={{ color: 'var(--secondary-text)', fontSize: '1.25rem' }}><FiGithub /></a>
-              <a href="https://www.linkedin.com/in/suhassagar6" style={{ color: 'var(--secondary-text)', fontSize: '1.25rem' }}><FiLinkedin /></a>
-              <a href="mailto:suhassagar44@gmail.com" style={{ color: 'var(--secondary-text)', fontSize: '1.25rem' }}><FiMail /></a>
+              <a href="https://github.com/Suhassagar" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--secondary-text)', fontSize: '1.25rem' }}><FiGithub /></a>
+              <a href="https://www.linkedin.com/in/suhassagar6" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--secondary-text)', fontSize: '1.25rem' }}><FiLinkedin /></a>
+              <a href="mailto:suhassagar06@gmail.com" style={{ color: 'var(--secondary-text)', fontSize: '1.25rem' }}><FiMail /></a>
             </div>
           </div>
         </motion.div>
@@ -60,13 +63,13 @@ const Hero = () => {
               width: '400px',
               height: '400px',
               borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%',
-              background: 'linear-gradient(135deg, #eff6ff 0%, #e0e7ff 100%)',
+              background: 'linear-gradient(135deg, var(--primary-color) 0%, #38bdf8 100%)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
               overflow: 'hidden',
-              boxShadow: 'var(--shadow-lg)',
-              border: '8px solid white'
+              boxShadow: '0 25px 50px -12px rgba(79, 70, 229, 0.4)',
+              border: '8px solid var(--card-bg)'
             }}
           >
             <img

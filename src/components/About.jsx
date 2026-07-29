@@ -12,17 +12,12 @@ const About = () => {
         >
           <h2 className="section-title">About Me</h2>
           
-          <div className="card" style={{ padding: '3rem' }}>
-            <p style={{ fontSize: '1.1rem', color: 'var(--text-color)', marginBottom: '1.5rem', lineHeight: 1.8 }}>
-              I am a dedicated <strong>Computer Science Engineering Student</strong> and a passionate <strong>Full Stack Web Developer</strong>. With a strong foundation in modern web technologies, I specialize in building scalable, responsive, and user-centric applications.
+          <div className="card" style={{ padding: '3rem', borderLeft: '4px solid var(--primary-color)' }}>
+            <p style={{ fontSize: '1.1rem', color: 'var(--text-color)', lineHeight: 1.8, marginBottom: '1.5rem' }}>
+              I am a <strong>Computer Science Engineering student</strong> and <strong>Full Stack Web Developer</strong> passionate about building scalable, responsive, and user-focused web applications.
             </p>
-            
-            <p style={{ fontSize: '1.1rem', color: 'var(--text-color)', marginBottom: '1.5rem', lineHeight: 1.8 }}>
-              During my time as a <strong>React Developer Intern</strong> and <strong>Java Developer Intern</strong>, I gained hands-on experience in architecting robust front-end interfaces and developing efficient back-end services. I am a strong problem solver who thrives in collaborative environments and constantly seeks to expand my technical knowledge.
-            </p>
-            
-            <p style={{ fontSize: '1.1rem', color: 'var(--text-color)', lineHeight: 1.8 }}>
-              Whether it's optimizing database queries, designing intuitive UI components, or learning a completely new framework, I am driven by a continuous <strong>passionate learning</strong> mindset to deliver high-quality software solutions.
+            <p style={{ fontSize: '1.1rem', color: 'var(--secondary-text)', lineHeight: 1.8 }}>
+              With hands-on experience as a <strong>React Developer</strong> and <strong>Java Developer Intern</strong>, I have developed strong skills in modern web technologies, problem-solving, and collaborative software development. I enjoy learning new technologies, optimizing applications, and creating efficient, high-quality solutions that deliver real-world impact.
             </p>
           </div>
         </motion.div>
