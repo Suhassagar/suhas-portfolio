@@ -28,7 +28,7 @@ const Experience = () => {
 
   return (
     <section id="experience" className="section" style={{ backgroundColor: 'var(--alt-bg)' }}>
-      <div className="container" style={{ maxWidth: '900px' }}>
+      <div className="container" style={{ maxWidth: '700px' }}>
         <h2 className="section-title">Experience</h2>
 
         <div style={{ position: 'relative', paddingLeft: '2.5rem' }}>
@@ -58,19 +58,19 @@ const Experience = () => {
                   boxShadow: '0 0 0 4px var(--alt-bg)'
                 }}></div>
 
-                <div className="card" style={{ padding: '2rem', borderLeft: '4px solid var(--primary-color)' }}>
-                  <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: 'var(--text-color)', marginBottom: '0.25rem' }}>
+                <div className="card" style={{ padding: '1.5rem', borderLeft: '4px solid var(--primary-color)' }}>
+                  <h3 style={{ fontSize: '1.25rem', fontWeight: 600, color: 'var(--text-color)', marginBottom: '0.25rem' }}>
                     {exp.role}
                   </h3>
-                  <p style={{ color: 'var(--primary-color)', fontWeight: 500, marginBottom: '1.5rem' }}>
+                  <p style={{ color: 'var(--primary-color)', fontWeight: 500, marginBottom: '1.25rem', fontSize: '0.9rem' }}>
                     {exp.company}
                   </p>
 
-                  <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+                  <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
                     {exp.highlights.map((highlight, idx) => (
-                      <li key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', color: 'var(--secondary-text)' }}>
+                      <li key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.5rem', color: 'var(--secondary-text)', fontSize: '0.95rem' }}>
                         <div style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: 'var(--primary-color)', flexShrink: 0, marginTop: '8px' }}></div>
-                        <span style={{ lineHeight: 1.5 }}>{highlight}</span>
+                        <span style={{ lineHeight: 1.4 }}>{highlight}</span>
                       </li>
                     ))}
                   </ul>

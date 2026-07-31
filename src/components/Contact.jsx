@@ -38,7 +38,7 @@ const Contact = () => {
       <div className="container" style={{ maxWidth: '1000px' }}>
         <h2 className="section-title">Get In Touch</h2>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '4rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))', gap: '4rem' }}>
 
           <motion.div
             initial={{ opacity: 0, x: -30 }}

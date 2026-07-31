@@ -86,6 +86,14 @@ const Projects = () => {
       features: ['Centralized medical records', 'Role-based access', 'AI-powered analytics', 'Blockchain data integrity']
     },
     {
+      title: 'Quick Voice',
+      subtitle: 'AI Voice Agent Infrastructure',
+      tag: 'Open Source Contributor',
+      features: ['Integrated Langfuse observability', 'Configured secure API keys', 'Captured AI trace data', 'Validated local execution'],
+      stack: ['Python', 'Langfuse', 'AI/ML'],
+      githubUrl: 'https://github.com/Suhassagar/QuickVoice'
+    },
+    {
       title: 'MIT EduPulse',
       subtitle: 'College Feedback Management System',
       features: ['Student feedback', 'Admin dashboard', 'REST API', 'Database Integration'],
@@ -113,7 +121,7 @@ const Projects = () => {
       <div className="container">
         <h2 className="section-title">Featured Projects</h2>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '2.5rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))', gap: '2.5rem' }}>
           {projects.map((project, index) => (
             <ProjectCard key={index} project={project} index={index} />
           ))}

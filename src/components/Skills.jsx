@@ -53,7 +53,7 @@ const Skills = () => {
       <div className="container">
         <h2 className="section-title">Skills</h2>
         
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '2rem' }}>
           {skillCategories.map((category, index) => (
             <motion.div
               key={index}

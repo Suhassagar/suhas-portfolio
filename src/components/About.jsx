@@ -12,7 +12,7 @@ const About = () => {
         >
           <h2 className="section-title">About Me</h2>
           
-          <div className="card" style={{ padding: '3rem', borderLeft: '4px solid var(--primary-color)' }}>
+          <div className="card" style={{ padding: 'clamp(1.5rem, 5vw, 3rem)', borderLeft: '4px solid var(--primary-color)' }}>
             <p style={{ fontSize: '1.1rem', color: 'var(--text-color)', lineHeight: 1.8, marginBottom: '1.5rem' }}>
               I am a <strong>Computer Science Engineering student</strong> and <strong>Full Stack Web Developer</strong> passionate about building scalable, responsive, and user-focused web applications.
             </p>
