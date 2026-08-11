@@ -79,6 +79,7 @@ const ProjectCard = ({ project, index }) => (
 
 const Projects = () => {
   const projects = [
+
     {
       title: 'MediSync',
       subtitle: 'Secure Healthcare Record Management System',
@@ -99,6 +100,14 @@ const Projects = () => {
       features: ['Student feedback', 'Admin dashboard', 'REST API', 'Database Integration'],
       stack: ['React', 'Node', 'Express', 'MySQL', 'JavaScript'],
       githubUrl: 'https://github.com/Suhassagar/college_feedback_system'
+    },
+    {
+      title: 'Demand Drift Intelligence Platform',
+      subtitle: 'Autonomous AI Monitoring & Threat Summarization',
+      tag: 'GEN AI',
+      features: ['AI Copilot Integration', 'Autonomous Monitoring', 'Real-time Data Processing', 'Executive Dashboard'],
+      stack: ['React', 'Node.js', 'Express', 'Gemini AI API'],
+      githubUrl: 'https://github.com/Suhassagar/Demand-Drift-Intelligence-Platform'
     },
     {
       title: 'TaskPulse',
