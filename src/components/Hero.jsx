@@ -38,7 +38,7 @@ const Hero = () => {
 
           <div className="hero-actions" style={{ display: 'flex', gap: '1rem', alignItems: 'center', flexWrap: 'wrap' }}>
             <a href="#projects" className="btn btn-primary">View Projects</a>
-            <a href="https://drive.google.com/file/d/1OUDuqj7V_veH2Y4kFcP_XP_jgOwawtZw/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="btn btn-outline">Download Resume</a>
+            <a href="https://drive.google.com/file/d/1AQYApfW4EB2TIBJGgJiT4nlSK8R8cNHo/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="btn btn-outline">Download Resume</a>
 
             <div style={{ display: 'flex', gap: '1rem', marginLeft: '1rem' }}>
               <a href="https://github.com/Suhassagar" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--secondary-text)', fontSize: '1.25rem' }}><FiGithub /></a>

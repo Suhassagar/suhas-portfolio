@@ -32,9 +32,9 @@ const Navbar = ({ theme, toggleTheme }) => {
       }}
     >
       <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '80px' }}>
-        <a href="#home" style={{ 
-          fontSize: '1.5rem', 
-          fontWeight: 800, 
+        <a href="#home" style={{
+          fontSize: '1.5rem',
+          fontWeight: 800,
           letterSpacing: '-1px',
           background: 'linear-gradient(90deg, var(--text-color) 0%, var(--primary-color) 100%)',
           WebkitBackgroundClip: 'text',
@@ -62,7 +62,7 @@ const Navbar = ({ theme, toggleTheme }) => {
             {theme === 'dark' ? <FiSun size={20} /> : <FiMoon size={20} />}
           </button>
 
-          <a href="https://drive.google.com/file/d/1OUDuqj7V_veH2Y4kFcP_XP_jgOwawtZw/view?usp=sharing" target="_blank" rel="noopener noreferrer" className={`btn ${scrolled ? 'btn-primary' : 'btn-outline'} desktop-resume`} style={{ fontSize: '0.9rem' }}>
+          <a href="https://drive.google.com/file/d/1AQYApfW4EB2TIBJGgJiT4nlSK8R8cNHo/view?usp=sharing" target="_blank" rel="noopener noreferrer" className={`btn ${scrolled ? 'btn-primary' : 'btn-outline'} desktop-resume`} style={{ fontSize: '0.9rem' }}>
             Download Resume
           </a>
 
@@ -100,7 +100,7 @@ const Navbar = ({ theme, toggleTheme }) => {
           <a href="#skills" onClick={() => setIsMobileMenuOpen(false)} style={{ fontSize: '1rem', fontWeight: 500, color: 'var(--text-color)' }}>Skills</a>
           <a href="#projects" onClick={() => setIsMobileMenuOpen(false)} style={{ fontSize: '1rem', fontWeight: 500, color: 'var(--text-color)' }}>Projects</a>
           <a href="#contact" onClick={() => setIsMobileMenuOpen(false)} style={{ fontSize: '1rem', fontWeight: 500, color: 'var(--text-color)' }}>Contact</a>
-          <a href="https://drive.google.com/file/d/1OUDuqj7V_veH2Y4kFcP_XP_jgOwawtZw/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ fontSize: '0.9rem', justifyContent: 'center', marginTop: '1rem' }}>
+          <a href="https://drive.google.com/file/d/1AQYApfW4EB2TIBJGgJiT4nlSK8R8cNHo/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ fontSize: '0.9rem', justifyContent: 'center', marginTop: '1rem' }}>
             Download Resume
           </a>
         </motion.div>
